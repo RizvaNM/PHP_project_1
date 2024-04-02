@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="vh-100 w-100 background-radial-gradient overflow-x-hidden">
+        <div class="gap-5 flex justify-content-center">
+            <div>
+                <img src="{{ product.ImagePath }}" alt="{{ product.Name }}" class="">
+            </div>
+            <div class="flex flex-column align-items-start">
+                <h4>{{ product.Name }}</h4>
+                <p>{{ product.Description }}</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

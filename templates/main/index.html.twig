@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="/css/main.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block header %}
+    <header>
+            <div class="nav container">
+                <a href="#" class="logo">VseMayki</a>
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>
+                <div class="cart">
+                    <h2 class="cart-title">Tou Cart</h2>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <button type="button" class="btn-buy">Buy Now</button>
+                    <i class='bx bx-x' id="close-cart"></i>
+                </div>
+            </div>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <div class="shop-content">
+        {% for product in products %}        
+            <div class="product-box">
+                <img src="img/produc1.jpg" alt="" class="product-img">
+                <h2 class="product-title"> product.getName() </h2>
+                <span class="price"> product.getPrice() </span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+{% endblock %}
